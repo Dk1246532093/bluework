@@ -1,0 +1,62 @@
+public class Pet {
+    String name;
+    String sex;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public Pet(String name, String sex) {
+        this.name=name;
+        this.sex=sex;
+    }
+
+    void talk() {
+        System.out.println("叫");
+    }
+
+    void eat() {
+        System.out.println("吃");
+    }
+}
+class Dog extends Pet{
+    private String color;
+    public String getcolor(){
+        return color;
+    }
+    Dog(String name,String sex,String color){
+        super(name,sex);
+        this.color = color;
+    }
+    public void talk(){
+        System.out.println("名称："+getName()+",性别："+getSex()+",颜色："+getcolor()+"，汪汪叫");
+    }
+    public void eat(){
+        System.out.println(getName() +"吃骨头！");
+    }
+}
+class Cat extends Pet{
+    double weight;
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    Cat(String name,String sex,double weight){
+        super(name,sex);
+        this.weight=weight;
+    }
+    public void talk(){
+        System.out.println("名称："+getName()+",性别："+getSex()+",体重："+getWeight()+"kg,喵喵叫");
+    }
+    public void eat(){
+        System.out.println(getName()+"吃鱼");
+    }
+}
