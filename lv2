@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int z=0;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for(int i=n;i>=0;){
+            int x=1;
+            int y=1;
+            int m=(n-i)/2;
+            int sum=i+m;
+            for(int a=sum;a>sum-m;){
+                x*=a;
+                a--;
+            }
+            if(m==0){
+                m+=1;
+            }
+            for(int b=1;b<=m;){
+                y*=b;
+                b++;
+            }
+            z+=x/y;
+            i-=2;
+        }
+        System.out.println(z);
+    }
+}
